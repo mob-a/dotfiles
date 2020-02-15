@@ -1,0 +1,5 @@
+Host vm
+    HostName localhost
+    User foo
+    Port 2222
+    IdentityFile C:\Users\username\.ssh\id_rsa

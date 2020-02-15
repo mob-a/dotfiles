@@ -1,0 +1,7 @@
+C:\Users\username\.ssh\config
+C:\Users\username\.ssh\id_rsa
+
+VSCodeのRemote Developmentをするときに必要
+
+コマンドプロンプトで ssh-keygen が可能
+秘密鍵は C:\Users\username\.ssh\ 以下に入れておかないと、いろいろエラーが起きる

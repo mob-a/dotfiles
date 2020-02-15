@@ -1,0 +1,19 @@
+escape ^]^|
+
+defflow off
+autodetach on
+vbell off
+caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
+
+bind z info
+bind ^z info
+bind Z info
+bind ^Z info
+bind g info
+bind ^g info
+bind G info
+bind ^G info
+bind F info
+bind ^F info
+bind f info
+bind ^f info
