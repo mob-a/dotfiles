@@ -1,0 +1,5 @@
+# 一発でログイン可能なショートカット
+リンク先
+C:\my_program_files\teraterm-4.104\ttermpro.exe C:\my_program_files\teraterm-4.104\ttpmacro.exe /ssh2 foo@localhost:2222 /auth=publickey /keyfile=C:\Users\username\.ssh\id_rsa
+作業フォルダ
+C:\my_program_files\teraterm-4.104

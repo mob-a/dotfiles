@@ -1,0 +1,5 @@
+# 一発で起動可能なショートカット
+リンク先
+C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm vmname --type headless
+作業フォルダ
+"C:\Program Files\Oracle\VirtualBox"
