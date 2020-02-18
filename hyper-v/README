@@ -1,0 +1,9 @@
+# 一発で起動可能なショートカット
+- PS1ファイル作る (startvm.ps1)
+Start-VM  fastdev
+
+- PowerShellでそのPS1ファイルを実行するショートカット
+-- 参考  https://qiita.com/tomoko523/items/df8e384d32a377381ef9
+-- リンク先:
+ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy RemoteSigned -File C:\foo\startvm.ps1
+-- ショートカットのプロパティ>詳細設定から「管理者として実行」
