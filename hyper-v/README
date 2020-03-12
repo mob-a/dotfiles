@@ -1,6 +1,6 @@
 # 一発で起動可能なショートカット
 - PS1ファイル作る (startvm.ps1)
-Start-VM  fastdev
+Start-VM  vmname
 
 - PowerShellでそのPS1ファイルを実行するショートカット
 -- 参考  https://qiita.com/tomoko523/items/df8e384d32a377381ef9
