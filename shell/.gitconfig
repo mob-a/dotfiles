@@ -1,0 +1,7 @@
+[user]
+        email = mob-a
+        name = 34401954+mob-a@users.noreply.github.com
+[color]
+        ui = true
+[push]
+        default = current
