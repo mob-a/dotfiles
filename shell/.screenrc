@@ -1,9 +1,28 @@
 escape ^]^|
 
-defflow off
+defbce on
+
+# term term-256color
+# term xterm-256color
+term screen-256color
+#term screen.xterm-256color
+
+startup_message off
 autodetach on
 vbell off
-caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
+# defmonitor on
+defscrollback 2048
+defflow off
+
+defencoding utf-8
+encoding utf-8 utf-8
+setenv LANG ja_JP.UTF-8
+
+hardstatus alwayslastline "%{= Kw} %-Lw%40L>%{b KC} %n %t %{-}%+w%-0="
+# markkeys j=^N:k=^P:l=^F:0=^A:$=^E:^F=^V:h=^B
+
+bind ^Y paste .
+bind 'K' kill
 
 bind z info
 bind ^z info
@@ -17,3 +36,14 @@ bind F info
 bind ^F info
 bind f info
 bind ^f info
+
+# @check number of colors 
+# wget https://gist.githubusercontent.com/clairvy/566623/raw/efa655f31194915f6f7675475f6d034ed1438259/256colors2.pl
+# perl 256colors2.pl
+#
+# @build screen with 256 colors
+# https://ftp.gnu.org/gnu/screen/
+#
+# wget https://ftp.gnu.org/gnu/screen/screen-4.8.0.tar.gz
+# ./configure --prefix=/usr/local/ --enable-colors256
+# make && sudo make install
