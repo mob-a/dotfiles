@@ -1,0 +1,21 @@
+; Translucent window (0 - 255: transparency value)
+AlphaBlend=240
+
+; Enable clickable URL
+EnableClickableUrl=off
+
+; Font
+VTFont=VL ÉSÉVÉbÉN,0,-21,128
+
+; Font quality(default/non-antialiased/antialiased/cleartype)
+FontQuality=antialiased
+
+; Meta key (on/off/left/right)
+MetaKey=on
+
+; SSH agent forwarding (pageant) (1=enabled 0=disabled)
+ForwardAgent=1
+
+; Confirm SSH agent forwarding (1=enabled 0=disabled)
+ForwardAgentConfirm=0
+
