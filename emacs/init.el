@@ -13,6 +13,7 @@
 (setq make-backup-files nil) ; バックアップファイルを作らない
 (setq auto-save-default nil) ; バックアップファイルを作らない
 (add-hook 'before-save-hook 'delete-trailing-whitespace) ; 末尾スペースを削除
+(setq require-final-newline t) ; ファイルの最後に改行を入れる
 (menu-bar-mode -1) ; メニューバーを消す
 
 ;;;;;;;;;;;;;;;;
