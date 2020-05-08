@@ -36,6 +36,8 @@ bind F info
 bind ^F info
 bind f info
 bind ^f info
+bind x info
+bind ^x info
 
 # @check number of colors 
 # wget https://gist.githubusercontent.com/clairvy/566623/raw/efa655f31194915f6f7675475f6d034ed1438259/256colors2.pl
