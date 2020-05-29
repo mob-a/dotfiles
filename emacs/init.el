@@ -35,13 +35,14 @@
 ;; curl https://raw.githubusercontent.com/purcell/flymake-python-pyflakes/master/flymake-python-pyflakes.el > ~/.emacs.d/elisp/flymake-python-pyflakes.el
 ;; curl https://raw.githubusercontent.com/purcell/flymake-easy/master/flymake-easy.el > ~/.emacs.d/elisp/flymake-easy.el
 ;; curl https://raw.githubusercontent.com/fujimisakari/py-autopep8.el/master/py-autopep8.el > ~/.emacs.d/elisp/py-autopep8.el
-;(require 'flymake-python-pyflakes)
-;(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
-;(setq flymake-python-pyflakes-executable "~/.local/bin/flake8")
-;(custom-set-variables '(flymake-python-pyflakes-extra-arguments (quote ("--max-line-length=160" "--ignore=I100,I101,I201,I202"))))
-;(require 'py-autopep8)
-;(define-key python-mode-map (kbd "C-c f") 'py-autopep8)
-
+;; pip3 install --user flake8 autopep8
+; (require 'flymake-python-pyflakes)
+; (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+; (setq flymake-python-pyflakes-executable "~/.local/bin/flake8")
+; (custom-set-variables '(flymake-python-pyflakes-extra-arguments (quote ("--max-line-length=160" "--ignore=I100,I101,I201,I202"))))
+; (require 'py-autopep8)
+; (add-hook 'python-mode-hook (lambda () (define-key python-mode-map (kbd "C-c f") 'py-autopep8)))
+; (setq py-autopep8-options '("--max-line-length=160"))
 
 ;;; c
 ;; indent
