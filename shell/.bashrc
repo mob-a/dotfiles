@@ -23,6 +23,7 @@ stty -ixon -ixoff
 
 export PS1='\033[01;32m\][\u:$PWD]\$\[\033[00m\] '
 
+export TERM=xterm-256color
 
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
 export HISTCONTROL=ignoreboth
