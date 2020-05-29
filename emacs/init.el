@@ -31,21 +31,19 @@
 ;;;;;;;;;;;;;;;;
 ;; コーディング設定
 ;;;;;;;;;;;;;;;;
-;; python
-;; flymake
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list "~/.local/bin/pyflakes"  (list local-file))))
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pyflakes-init)))
+;;; python
+;; curl https://raw.githubusercontent.com/purcell/flymake-python-pyflakes/master/flymake-python-pyflakes.el > ~/.emacs.d/elisp/flymake-python-pyflakes.el
+;; curl https://raw.githubusercontent.com/purcell/flymake-easy/master/flymake-easy.el > ~/.emacs.d/elisp/flymake-easy.el
+;; curl https://raw.githubusercontent.com/fujimisakari/py-autopep8.el/master/py-autopep8.el > ~/.emacs.d/elisp/py-autopep8.el
+;(require 'flymake-python-pyflakes)
+;(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+;(setq flymake-python-pyflakes-executable "~/.local/bin/flake8")
+;(custom-set-variables '(flymake-python-pyflakes-extra-arguments (quote ("--max-line-length=160" "--ignore=I100,I101,I201,I202"))))
+;(require 'py-autopep8)
+;(define-key python-mode-map (kbd "C-c f") 'py-autopep8)
 
-;; c
+
+;;; c
 ;; indent
 ;(setq-default indent-tabs-mode nil)
 ;; flymake
@@ -61,7 +59,7 @@
 ;          '(lambda ()
 ;             (flymake-mode t)))
 
-;; yaml 
+;;; yaml 
 ;; curl https://raw.githubusercontent.com/yoshiki/yaml-mode/v0.0.13/yaml-mode.el > ~/.emacs.d/elisp/yaml-mode.el
 ;(require 'yaml-mode)
 ;(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
