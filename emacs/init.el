@@ -16,6 +16,9 @@
 (setq require-final-newline t) ; ファイルの最後に改行を入れる
 (menu-bar-mode -1) ; メニューバーを消す
 
+(load-theme 'tsdh-dark t) ; theme
+(set-face-background 'default "black") ; 背景色は黒
+
 ;;;;;;;;;;;;;;;;
 ;; 日本語設定
 ;;;;;;;;;;;;;;;;
@@ -65,3 +68,8 @@
 ;(require 'yaml-mode)
 ;(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 ;(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+
+;;; typescript
+;; curl https://raw.githubusercontent.com/emacs-typescript/typescript.el/master/typescript-mode.el > ~/.emacs.d/elisp/typescript-mode.el
+;(require 'typescript-mode)
+;(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
