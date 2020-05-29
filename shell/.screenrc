@@ -48,4 +48,5 @@ bind ^x info
 #
 # wget https://ftp.gnu.org/gnu/screen/screen-4.8.0.tar.gz
 # ./configure --prefix=/usr/local/ --enable-colors256
+# (if error: sudo yum install ncurses-devel )
 # make && sudo make install
