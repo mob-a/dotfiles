@@ -41,24 +41,28 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "/usr/local/bin/pyflakes"  (list local-file))))
+      (list "~/.local/bin/pyflakes"  (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 
 ;; c
 ;; indent
-(setq-default indent-tabs-mode nil)
+;(setq-default indent-tabs-mode nil)
 ;; flymake
-(defun flymake-cc-init ()
-  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-         (local-file  (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-    (list "g++" (list "-std=c11" "-Wall" "-Wextra" "-fsyntax-only" local-file))))
+;(defun flymake-cc-init ()
+;  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+;                       'flymake-create-temp-inplace))
+;         (local-file  (file-relative-name
+;                       temp-file
+;                       (file-name-directory buffer-file-name))))
+;    (list "g++" (list "-std=c11" "-Wall" "-Wextra" "-fsyntax-only" local-file))))
+;(push '("\\.c$" flymake-cc-init) flymake-allowed-file-name-masks)
+;(add-hook 'c-mode-hook
+;          '(lambda ()
+;             (flymake-mode t)))
 
-(push '("\\.c$" flymake-cc-init) flymake-allowed-file-name-masks)
-
-(add-hook 'c-mode-hook
-          '(lambda ()
-             (flymake-mode t)))
+;; yaml 
+;; curl https://raw.githubusercontent.com/yoshiki/yaml-mode/v0.0.13/yaml-mode.el > ~/.emacs.d/elisp/yaml-mode.el
+;(require 'yaml-mode)
+;(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
