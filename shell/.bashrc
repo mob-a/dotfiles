@@ -21,8 +21,7 @@ alias q='exit'
 #http://d.hatena.ne.jp/ksmemo/20110214/p1
 stty -ixon -ixoff
 
-export PS1='\033[01;32m\][\u:$PWD]\$\[\033[00m\] '
-
+export PS1='\[\e[01;32m\][\u:$PWD]\$\[\e[00m\] '
 export TERM=xterm-256color
 
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
