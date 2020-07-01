@@ -19,3 +19,5 @@ ForwardAgent=1
 ; Confirm SSH agent forwarding (1=enabled 0=disabled)
 ForwardAgentConfirm=0
 
+; Default directory for file transfers
+FileDir=C:\Users\username\Desktop
