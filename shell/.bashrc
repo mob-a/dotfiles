@@ -26,3 +26,8 @@ export TERM=xterm-256color
 
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
 export HISTCONTROL=ignoreboth
+
+# export http_proxy=http://localhost:3128/
+# export https_proxy=http://localhost:3128/
+# export proxy_host=`echo $http_proxy|perl -ple 's!^.*//([^:]*):(\d+)[^\d]*$!$1!'`
+# export proxy_port=`echo $http_proxy|perl -ple 's!^.*//([^:]*):(\d+)[^\d]*$!$2!'`
