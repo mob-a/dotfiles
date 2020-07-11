@@ -29,5 +29,6 @@ export HISTCONTROL=ignoreboth
 
 # export http_proxy=http://localhost:3128/
 # export https_proxy=http://localhost:3128/
+# export no_proxy=localhost,127.0.0.1
 # export proxy_host=`echo $http_proxy|perl -ple 's!^.*//([^:]*):(\d+)[^\d]*$!$1!'`
 # export proxy_port=`echo $http_proxy|perl -ple 's!^.*//([^:]*):(\d+)[^\d]*$!$2!'`
