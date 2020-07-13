@@ -1,0 +1,8 @@
+#!/bin/bash
+set -eux
+
+newbranch=$1
+git checkout develop
+git pull
+git checkout origin/develop
+git checkout -b $newbranch

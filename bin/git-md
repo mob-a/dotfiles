@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eux
+set +e
+git pull
+git merge remotes/origin/develop

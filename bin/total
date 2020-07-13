@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -nale 'for(@F[0]){$total+=$_}END{print $total}'

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+passwd=""
+while getopts p OPT
+do
+    case $OPT in
+        p)  passwd="1"
+            ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+len=16
+if [ $# -gt 0 ]
+then
+    len=$1
+fi
+
+num=1
+if [ $# -gt 1 ]
+then
+    num=$2
+fi
+
+if [ ! -z $passwd ]
+then
+    chars='"A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","m","n","o","p","q","r","s","t","u","v","w","x","y","z","2","3","4","5","6","7","8","9"'
+    charlen=57
+    isvalid='$x=~/[a-z]/ && $x=~/[A-Z]/ && $x=~/[0-9]/'
+else
+    chars='"A".."Z", "a".."z", 0..9'
+    charlen=62
+    isvalid='1'
+fi
+perl -le "for(\$n=0;\$n<${num};\$n++){ while(1) { \$x=''; for (\$i=0; \$i<${len}; \$i++) { \$x.=(${chars})[rand ${charlen}]; }; if(${isvalid}) {last;} };  print(\$x);}"

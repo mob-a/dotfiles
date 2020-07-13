@@ -1,0 +1,16 @@
+#!/bin/bash
+set -ux
+
+delopt="-d"
+while getopts D OPT
+do
+    case $OPT in
+        D) delopt="-D"
+            ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+git branch| grep -v "\*"|xargs -I{} git branch $delopt {}
+git pull --prune

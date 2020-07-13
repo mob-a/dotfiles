@@ -1,0 +1,22 @@
+#!/bin/bash
+set -eu
+
+opts=""
+coloropt="--color=always"
+len=200
+while getopts l:ip OPT
+do
+    case $OPT in
+        i) opts="$opts -i"
+            ;;
+        p) coloropt=""
+            ;;
+        b) len=$OPTARG
+            ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+word=$1
+grep  -r $opts $coloropt "$word" | awk '{ if (length($0) < 200) {print} else {print substr($0, 0, 200)} }'
