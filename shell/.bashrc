@@ -27,6 +27,8 @@ export TERM=xterm-256color
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
 export HISTCONTROL=ignoreboth
 
+export PIPENV_VENV_IN_PROJECT=true
+
 # export http_proxy=http://localhost:3128/
 # export https_proxy=http://localhost:3128/
 # export no_proxy=localhost,127.0.0.1
