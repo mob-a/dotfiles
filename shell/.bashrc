@@ -27,6 +27,7 @@ export TERM=xterm-256color
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 export PIPENV_VENV_IN_PROJECT=true
 
