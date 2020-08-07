@@ -21,3 +21,7 @@ ForwardAgentConfirm=0
 
 ; Default directory for file transfers
 FileDir=C:\Users\username\Desktop
+
+; Beep by BEL (on/off/visual)
+Beep=off
+
