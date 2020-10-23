@@ -25,3 +25,5 @@ FileDir=C:\Users\username\Desktop
 ; Beep by BEL (on/off/visual)
 Beep=off
 
+; "Disconnect?" warning
+ConfirmDisconnect=off
