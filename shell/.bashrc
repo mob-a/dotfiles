@@ -18,8 +18,11 @@ alias h='history'
 alias em='emacs'
 alias q='exit'
 
-#http://d.hatena.ne.jp/ksmemo/20110214/p1
-stty -ixon -ixoff
+# https://linuxfan.info/disable-ctrl-s
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
+fi
 
 export PS1='\[\e[01;32m\][\u:$PWD]\$\[\e[00m\] '
 export TERM=xterm-256color
@@ -30,6 +33,17 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 
 export PIPENV_VENV_IN_PROJECT=true
+
+# To enable agent forwarding when screen is reconnected.
+# http://mokokko.hatenablog.com/entry/2013/03/14/133850
+AUTH_SOCK="$HOME/.ssh/.ssh-auth-sock"
+if [ -S "$AUTH_SOCK" ]; then
+    export SSH_AUTH_SOCK=$AUTH_SOCK
+elif [ ! -S "$SSH_AUTH_SOCK" ]; then
+    export SSH_AUTH_SOCK=$AUTH_SOCK
+elif [ ! -L "$SSH_AUTH_SOCK" ]; then
+    ln -snf "$SSH_AUTH_SOCK" $AUTH_SOCK && export SSH_AUTH_SOCK=$AUTH_SOCK
+fi
 
 # export http_proxy=http://localhost:3128/
 # export https_proxy=http://localhost:3128/
