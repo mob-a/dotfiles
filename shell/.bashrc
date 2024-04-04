@@ -27,6 +27,9 @@ fi
 export PS1='\[\e[01;32m\][\u:$PWD]\$\[\e[00m\] '
 export TERM=xterm-256color
 
+# https://unix.stackexchange.com/questions/391201/user-hostname-shown-two-times-in-terminal-after-ssh
+unset PROMPT_COMMAND
+
 # 空白から始まるコマンドはhistoryに残さない/連続は1回だけ
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
